@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="817.0" style="-fx-background-color: #EDF0EC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cau.gui.ResultSController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="496.0" prefWidth="817.0">
+         <children>
+            <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" prefHeight="40.0" prefWidth="40.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/refresh.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <StackPane.margin>
+                  <Insets right="-707.0" top="-440.0" />
+               </StackPane.margin>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/loupe.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets right="750.0" top="-435.0" />
+               </StackPane.margin>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Results of sourcecode">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="445.0" top="-435.0" />
+               </StackPane.margin>
+            </Text>
+            <Button mnemonicParsing="false" onAction="#btnShowDetails" prefHeight="35.0" prefWidth="129.0" text="Show Details">
+               <StackPane.margin>
+                  <Insets bottom="435.0" left="400.0" />
+               </StackPane.margin>
+            </Button>
+            <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Classbased Couplings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableviewS" prefHeight="370.0" prefWidth="736.0">
+                                <columns>
+                                  <TableColumn fx:id="name" prefWidth="402.0" text="Name" />
+                                  <TableColumn fx:id="m2m" prefWidth="149.0" text="Method-to-Method" />
+                                    <TableColumn fx:id="imprt" prefWidth="59.0" text="Import" />
+                                    <TableColumn fx:id="field" prefWidth="53.0" text="Field" />
+                                    <TableColumn fx:id="inher" prefWidth="93.0" text="Inheritance" />
+                                </columns>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Packagebased Couplings">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableViewPack" prefHeight="370.0" prefWidth="736.0">
+                                <columns>
+                                  <TableColumn fx:id="namePackage" minWidth="395.0" prefWidth="75.0" text="Name" />
+                                  <TableColumn fx:id="pckage" minWidth="200.0" prefWidth="75.0" text="Package" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <StackPane.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="55.0" />
+               </StackPane.margin>
+            </TabPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

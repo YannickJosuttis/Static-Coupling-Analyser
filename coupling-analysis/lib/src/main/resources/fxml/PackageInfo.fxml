@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="window" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cau.gui.PackageController">
+   <children>
+      <StackPane layoutX="1.0" layoutY="4.0" prefHeight="496.0" prefWidth="817.0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <TableView fx:id="tableViewPackageInfo" prefHeight="373.0" prefWidth="736.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="395.0" text="Name" />
+                <TableColumn fx:id="pckage" prefWidth="153.0" text="Package" />
+              </columns>
+               <StackPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="60.0" />
+               </StackPane.margin>
+            </TableView>
+            <Text fx:id="titlePackageName" strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;PackageName&gt;" StackPane.alignment="TOP_LEFT">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets left="30.0" top="20.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

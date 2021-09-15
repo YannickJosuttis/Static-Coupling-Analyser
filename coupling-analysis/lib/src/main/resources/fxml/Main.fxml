@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="806.0" style="-fx-background-color: #EDF0EC;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cau.gui.FXMLController">
+   <children>
+      <StackPane fx:id="stackPane" prefHeight="497.0" prefWidth="806.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings" wrappingWidth="105.7294921875">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="610.0" top="-440.0" />
+               </StackPane.margin>
+            </Text>
+            <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/settings.png" />
+               </image>
+               <StackPane.margin>
+                  <Insets right="760.0" top="-440.0" />
+               </StackPane.margin>
+            </ImageView>
+            <HBox prefHeight="246.0" prefWidth="559.0" style="-fx-background-color: #C3C5C4;">
+               <children>
+                  <VBox fx:id="vBoxDir" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="txtExternalLib" prefHeight="24.0" prefWidth="390.0" />
+                        <TextField fx:id="txtSoureRoot" prefHeight="24.0" prefWidth="390.0" />
+                        <TextField fx:id="txtBytecodeRoot" prefHeight="24.0" prefWidth="390.0" />
+                        <TextField fx:id="txtOutputRoot" prefHeight="24.0" prefWidth="390.0" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxBnt" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnExternalLib" mnemonicParsing="false" onAction="#chooseExternalLibDir" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #0E79B2;" text="External Library" textAlignment="CENTER" textFill="#fbfef9" />
+                        <Button fx:id="btnSourceRoot" mnemonicParsing="false" onAction="#chooseSourceRootDir" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #0E79B2;" text="Sourcecode root" textFill="#fbfef9" />
+                        <Button fx:id="btnBytecodeRoot" mnemonicParsing="false" onAction="#chooseBytecodeRootDir" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #0E79B2;" text="Bytecode root" textFill="#fbfef9" />
+                        <Button fx:id="btnOutputRoot" mnemonicParsing="false" onAction="#chooseOutputRootDir" prefHeight="24.0" prefWidth="135.0" style="-fx-background-color: #0E79B2;" text="Output root" textFill="#fbfef9" />
+                     </children>
+                  </VBox>
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="220.0" left="80.0" right="100.0" top="55.0" />
+               </StackPane.margin>
+            </HBox>
+            <HBox prefHeight="148.0" prefWidth="320.0" style="-fx-background-color: #C3C5C4;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <StackPane.margin>
+                  <Insets bottom="70.0" left="430.0" right="100.0" top="310.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox fx:id="vBoxLeftB" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="checkM2mB" mnemonicParsing="false" onMouseClicked="#mtm2B" text="Method-to-Method" textFill="#191923" />
+                        <CheckBox fx:id="checkInheritanceB" mnemonicParsing="false" onMouseClicked="#inheritanceB" text="Inheritance" textFill="#191923" />
+                        <CheckBox fx:id="checkImportB" mnemonicParsing="false" onMouseClicked="#importB" prefHeight="18.0" prefWidth="89.0" text="import" textFill="#191923" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxRightB" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="checkPackB" mnemonicParsing="false" onMouseClicked="#packB" text="Package" textFill="#191923" />
+                        <CheckBox fx:id="checkFieldB" mnemonicParsing="false" onMouseClicked="#fieldB" text="Field" textFill="#191923" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Metrics for Bytecode Analysis:" wrappingWidth="222.919921875">
+               <StackPane.margin>
+                  <Insets right="-350.0" top="150.0" />
+               </StackPane.margin>
+            </Text>
+            <HBox prefHeight="148.0" prefWidth="320.0" style="-fx-background-color: #C3C5C4;">
+               <StackPane.margin>
+                  <Insets bottom="70.0" left="80.0" right="450.0" top="310.0" />
+               </StackPane.margin>
+               <children>
+                  <VBox fx:id="vBoxLeftS" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="checkM2mS" mnemonicParsing="false" onMouseClicked="#mtm2S" text="Method-to-Method" textFill="#191923" />
+                        <CheckBox fx:id="checkInheritanceS" mnemonicParsing="false" onMouseClicked="#inheritanceS" text="Inheritance" textFill="#191923" />
+                        <CheckBox fx:id="checkImportS" mnemonicParsing="false" onMouseClicked="#importS" prefHeight="18.0" prefWidth="89.0" text="import" textFill="#191923" />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vBoxRightS" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <CheckBox fx:id="checkPackS" mnemonicParsing="false" onMouseClicked="#packS" text="Package" textFill="#191923" />
+                        <CheckBox fx:id="checkFieldS" mnemonicParsing="false" onMouseClicked="#fieldS" text="Field" textFill="#191923" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Metrics for Sourcecode Analysis:" wrappingWidth="222.919921875">
+               <StackPane.margin>
+                  <Insets right="390.0" top="150.0" />
+               </StackPane.margin>
+            </Text>
+            <Button fx:id="btnRun" mnemonicParsing="false" onAction="#run" style="-fx-background-color: #0E79B2;" text="Run" textAlignment="CENTER" textFill="#fbfef9">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <StackPane.margin>
+                  <Insets right="-700.0" top="-421.0" />
+               </StackPane.margin>
+            </Button>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Directory specifications:">
+               <StackPane.margin>
+                  <Insets right="450.0" top="-350.0" />
+               </StackPane.margin>
+            </Text>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
